@@ -48,3 +48,64 @@ localStorage.setItem("visitCount", visitCount);
 
 
 document.getElementById("visit-count").textContent = `Visits: ${visitCount}`;
+
+async function initChatbot() {
+  const input = document.getElementById('user-input');
+  const sendBtn = document.getElementById('send-btn');
+  const chatBox = document.querySelector('.chat-box');
+
+  sendBtn.addEventListener('click', sendMessage);
+  input.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage();
+  });
+
+  async function sendMessage() {
+    const message = input.value.trim();
+    if (!message) return;
+
+    appendMessage('user', message);
+    input.value = '';
+
+    const reply = await puter.ai.chat(message);
+    appendMessage('bot', reply);
+    }
+
+    function appendMessage(sender, text) {
+      const msgDiv = document.createElement('div');
+      msgDiv.classList.add('message', sender);
+      msgDiv.innerText = text;
+      chatBox.appendChild(msgDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  }
+
+  document.querySelector('.chatbot-toggle').addEventListener('click', () => {
+    const bot = document.getElementById('chatbot');
+    bot.style.display = bot.style.display === 'none' || bot.style.display === '' ? 'flex' : 'none';
+  });
+
+  function makeDraggable(header, container) {
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    header.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      offsetX = e.clientX - container.offsetLeft;
+      offsetY = e.clientY - container.offsetTop;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        container.style.left = e.clientX - offsetX + 'px';
+        container.style.top = e.clientY - offsetY + 'px';
+        container.style.position = 'fixed';
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+  }
+
+initChatbot();
+makeDraggable(document.getElementById('chat-header'), document.getElementById('chatbot'));
