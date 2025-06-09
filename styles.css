@@ -117,3 +117,39 @@ header {
 .cta-button:active {
   background-color: #d42e2b;
 }
+
+/*About*/
+.about {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #d6a12f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.about-content h2 {
+  font-size: 48px;
+  margin-top: -150px;
+  margin-bottom: 75px;
+  font-family: 'Rock Salt', cursive;
+}
+
+.about-content p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: 'Oxanium', cursive;
+  line-height: 40px;
+}
+
+.about-logo {
+  width: 578px;
+  height: 578px;
+  margin-right: 20px;
+}
