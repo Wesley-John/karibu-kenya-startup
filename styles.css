@@ -198,7 +198,7 @@ header {
 
 .carousel-wrapper {
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .product-list {
@@ -369,105 +369,105 @@ header {
 
 /*Chatbot Section*/
 .chatbot-toggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #d6a12f;
-      color: #123521;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-weight: bold;
-      cursor: pointer;
-      z-index: 1000;
-    }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d6a12f;
+  color: #123521;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+}
 
-    .chatbot-container {
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      background-color: #1e1e1e;
-      width: 400px;
-      max-width: 90%;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-      flex-direction: column;
-      overflow: hidden;
-      display: none;
-      resize: both;
-    }
+.chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #1e1e1e;
+  width: 400px;
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+  overflow: hidden;
+  display: none;
+  resize: both;
+}
 
-    .chat-header {
-      background-color: #d6a12f;
-      color: #123521;
-      padding: 20px;
-      text-align: center;
-      font-family: 'Rock Salt', cursive;
-      cursor: move;
-    }
+.chat-header {
+  background-color: #d6a12f;
+  color: #123521;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Rock Salt', cursive;
+  cursor: move;
+}
 
-    .chat-box {
-      background-color: #2a2a2a;
-      flex: 1;
-      padding: 15px;
-      overflow-y: auto;
-      height: 300px;
-    }
+.chat-box {
+  background-color: #2a2a2a;
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  height: 300px;
+}
 
-    .message {
-      margin: 10px 0;
-      padding: 10px;
-      border-radius: 8px;
-      max-width: 80%;
-      word-wrap: break-word;
-    }
+.message {
+margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
 
-    .message.user {
-      background-color: #d6a12f;
-      color: #123521;
-      align-self: flex-end;
-      margin-left: auto;
-    }
+.message.user {
+  background-color: #d6a12f;
+  color: #123521;
+  align-self: flex-end;
+  margin-left: auto;
+}
 
-    .message.bot {
-      background-color: #123521;
-      color: #d6a12f;
-      align-self: flex-start;
-      margin-right: auto;
-    }
+.message.bot {
+  background-color: #123521;
+  color: #d6a12f;
+  align-self: flex-start;
+  margin-right: auto;
+}
 
-    .chat-input {
-      display: flex;
-      padding: 10px;
-      background-color: #2a2a2a;
-    }
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background-color: #2a2a2a;
+}
 
-    .chat-input input {
-      flex: 1;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      margin-right: 10px;
-    }
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
 
-    .chat-input button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      background-color: #d6a12f;
-      color: #123521;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.chat-input button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d6a12f;
+  color: #123521;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    @media screen and (max-width: 500px) {
-      .chatbot-container {
-        width: 90%;
-        right: 5%;
-        bottom: 80px;
-      }
-    }
+@media screen and (max-width: 500px) {
+  .chatbot-container {
+    width: 90%;
+    right: 5%;
+    bottom: 80px;
+  }
+}
 
 /*Contacts Section*/
 .contact {
@@ -597,8 +597,14 @@ footer {
     font-size: 24px;
   }
 
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .about-content {
     align-items: center;
+    flex-direction: column;
   }
 
   .about-logo {
@@ -614,5 +620,9 @@ footer {
   .team-members {
     flex-direction: column;
     align-items: center;
+  }
+
+  .carousel-btn {
+    display: none; /* Hide carousel buttons on smaller screens */
   }
 }
