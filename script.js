@@ -22,14 +22,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const track = document.getElementById('carousel-track');
-const prevBtn = document.querySelector('.carousel-btn.prev');
-const nextBtn = document.querySelector('.carousel-btn.next');
+document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+  const track = wrapper.querySelector('.carousel-track');
+  const prevBtn = wrapper.querySelector('.carousel-btn.prev');
+  const nextBtn = wrapper.querySelector('.carousel-btn.next');
 
-nextBtn.addEventListener('click', () => {
-  track.scrollBy({ left: 370, behavior: 'smooth' });
-});
+  nextBtn.addEventListener('click', () => {
+    track.scrollBy({ left: 370, behavior: 'smooth' });
+  });
 
-prevBtn.addEventListener('click', () => {
-  track.scrollBy({ left: -370, behavior: 'smooth' });
+  prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -370, behavior: 'smooth' });
+  });
 });
