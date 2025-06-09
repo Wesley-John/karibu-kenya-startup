@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #123521;
   margin: 0;
   padding: 0;
 }
@@ -200,6 +200,7 @@ header {
   gap: 20px;
   background-color: #d6a12f;
   height: 500px;
+  border-radius: 10px;
 }
 
 .product-item {
@@ -223,3 +224,59 @@ header {
   font-family: 'Oxanium', cursive;
   color: #d6a12f;
 }
+
+/*FAQ Section*/
+  .faq {
+    margin: 40px auto;
+    padding: 20px;
+    font-family: "Oxanium", cursive;
+    background-color: #d6a12f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .faq-title h2 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 30px;
+    font-family: 'Rock Salt', cursive;
+    font-size: 48px;
+
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+
+  .faq-question {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .faq-question::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+  }
+
+  .faq-item.active .faq-question::after {
+    content: "-";
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .faq-item.active .faq-answer {
+    display: block;
+  }
