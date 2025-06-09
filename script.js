@@ -35,3 +35,16 @@ document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
     track.scrollBy({ left: -370, behavior: 'smooth' });
   });
 });
+
+let visitCount = localStorage.getItem("visitCount");
+
+if (!visitCount) {
+  visitCount = 1;
+} else {
+   visitCount = parseInt(visitCount) + 1;
+}
+
+localStorage.setItem("visitCount", visitCount);
+
+
+document.getElementById("visit-count").textContent = `Visits: ${visitCount}`;
