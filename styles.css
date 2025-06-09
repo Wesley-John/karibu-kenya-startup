@@ -375,3 +375,35 @@ input::placeholder {
   color: #555;
   font-family: 'Oxanium', cursive;
 }
+
+.contact .contact-form button {
+  background-color: #123521;
+  color: #d6a12f;
+  padding: 10px 20px;
+  border: solid 2px #987221;
+  border-width: 5px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Oxanium', cursive;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact .contact-form button:hover {
+  background-color: #d6a12f;
+  color: #123521;
+}
+
+.contact .contact-form button:active {
+  background-color: #d42e2b;
+  color: #fff;
+}
+
+/*Footer*/
+footer {
+  background-color: #d6a12f;
+  color: #123521;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Oxanium', cursive;
+}
