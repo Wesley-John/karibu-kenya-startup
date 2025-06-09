@@ -363,3 +363,15 @@ header {
   border-radius: 5px;
   font-size: 16px;
 }
+
+label {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-family: 'Oxanium', cursive;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: #555;
+  font-family: 'Oxanium', cursive;
+}
