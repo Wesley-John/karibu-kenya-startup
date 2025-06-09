@@ -63,3 +63,57 @@ header {
 .nav-links li a:hover {
   color: #ff6347; /* Tomato color on hover */
 }
+
+/*Hero Section*/
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  width: 100%;
+  height: 380px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: 'Rock Salt', cursive;
+}
+
+.hero h2 {
+  font-size: 64px;
+  margin-bottom: 20px;
+  font-family: 'Oxanium', cursive;
+}
+
+.hero p {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: 'Oxanium', cursive;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(246, 205, 43, 0.5);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 32px;
+  transition: background-color 0.3s ease;
+  font-family: "Caveat", cursive;
+}
+
+.cta-button:hover {
+  background-color: #e5e23d;
+}
+
+.cta-button:active {
+  background-color: #d42e2b;
+}
