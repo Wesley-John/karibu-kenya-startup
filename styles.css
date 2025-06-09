@@ -51,6 +51,10 @@ header {
 
 }
 
+.hamburger {
+  display: none; /* Hide hamburger icon by default */
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -406,4 +410,74 @@ footer {
   text-align: center;
   padding: 20px;
   font-family: 'Oxanium', cursive;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon on smaller screens */
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    margin-left: 8px;
+    color: #333;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+    top: 60px; /* Adjusted to position below the navbar */
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+  .navbar .nav-links.show {
+    display: flex;    
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .hero h1, .hero h2, .hero p {
+    font-size: 24px;
+  }
+
+  .about-content {
+    align-items: center;
+  }
+
+  .about-logo {
+    width: 300px;
+    height: 300px;
+  }
+
+  .products .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
 }
