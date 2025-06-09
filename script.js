@@ -21,3 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.classList.toggle('show');
   });
 });
+
+const track = document.getElementById('carousel-track');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+
+nextBtn.addEventListener('click', () => {
+  track.scrollBy({ left: 370, behavior: 'smooth' });
+});
+
+prevBtn.addEventListener('click', () => {
+  track.scrollBy({ left: -370, behavior: 'smooth' });
+});

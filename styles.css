@@ -196,14 +196,18 @@ header {
   margin-bottom: 40px;
 }
 
+.carousel-wrapper {
+  position: relative;
+  overflow:hidden;
+}
+
 .product-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
   background-color: #d6a12f;
-  height: 500px;
+  padding: 20px;
   border-radius: 10px;
 }
 
@@ -212,8 +216,9 @@ header {
   padding: 20px;
   border-radius: 10px;
   width: 350px;
-  height: 400px;
+  flex: 0 0 auto;
   text-align: center;
+  height: 400px;
 }
 
 .product-item img {
@@ -227,6 +232,34 @@ header {
   margin-top: 10px;
   font-family: 'Oxanium', cursive;
   color: #d6a12f;
+}
+
+/* Scroll Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: rgba(18, 53, 33, 0.8);
+  color: #d6a12f;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
 }
 
 /*FAQ Section*/
