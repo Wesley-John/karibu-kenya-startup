@@ -329,3 +329,37 @@ header {
   border-radius: 50%;
   margin-bottom: 20px;
 }
+
+/*Contacts Section*/
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #123521;
+}
+
+.contact h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: 'Rock Salt', cursive;
+  color: #d6a12f;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #d6a12f;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
