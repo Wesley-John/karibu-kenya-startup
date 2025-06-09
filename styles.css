@@ -141,6 +141,9 @@ header {
   font-family: 'Rock Salt', cursive;
 }
 
+.about-text {
+  padding-right: 20px;
+}
 .about-content p {
   font-size: 24px;
   margin-bottom: 20px;
